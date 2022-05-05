@@ -18,7 +18,8 @@ type intReturn struct {
 // IntReturn 整型数字校验，验证成功后结果将传入 Int 类型指针
 func IntReturn(valuePointer *int) Validator {
 	return &intReturn{
-		errorMsg: "必须是整型数字",
+		valuePointer: valuePointer,
+		errorMsg:     "必须是整型数字",
 	}
 }
 
