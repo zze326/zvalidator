@@ -18,3 +18,13 @@ func Test1_1(t *testing.T) {
 		fmt.Println(errs.GetString())
 	}
 }
+
+func Test1_2(t *testing.T) {
+	numStr := "123"
+	var num int
+	err := Validate(numStr, IntReturn(&num))
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(num)
+}

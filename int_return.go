@@ -28,7 +28,7 @@ func (i *intReturn) validate(value interface{}) bool {
 	if err != nil {
 		return false
 	}
-	i.valuePointer = &v
+	*i.valuePointer = v
 	return true
 }
 
