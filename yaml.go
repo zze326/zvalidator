@@ -8,8 +8,7 @@ package zvalidator
 import "github.com/zze326/zvalidator/utils"
 
 type yaml struct {
-	valueMapPointer map[interface{}]interface{}
-	errorMsg        string
+	errorMsg string
 }
 
 // Yaml 整型数字校验，验证成功后结果将传入 Int 类型指针
