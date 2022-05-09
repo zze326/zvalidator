@@ -28,3 +28,11 @@ func Test1_2(t *testing.T) {
 	}
 	fmt.Println(num)
 }
+
+func Test1_3(t *testing.T) {
+	yamlStr := "a: 12"
+	err := Validate(yamlStr, Yaml())
+	if err != nil {
+		panic(err)
+	}
+}
