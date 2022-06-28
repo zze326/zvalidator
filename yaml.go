@@ -11,7 +11,7 @@ type yaml struct {
 	errorMsg string
 }
 
-// Yaml 整型数字校验，验证成功后结果将传入 Int 类型指针
+// Yaml 格式校验
 func Yaml() Validator {
 	return &yaml{
 		errorMsg: "不符合 Yaml 格式",
