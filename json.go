@@ -21,8 +21,8 @@ func Json() Validator {
 func (j *zjson) validate(value interface{}) bool {
 	v, isOk := value.(string)
 	if isOk {
-		var tmpMap map[string]interface{}
-		err := json.Unmarshal([]byte(v), &tmpMap)
+		tmpObj := new(interface{})
+		err := json.Unmarshal([]byte(v), &tmpObj)
 		if err != nil {
 			return false
 		}
